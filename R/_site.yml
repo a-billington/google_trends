@@ -3,7 +3,7 @@ navbar:
   title: "HOME"
   left:
     - text: "First Observations"
-      href: first_observations.html
+      href: gtrends_dashboard.html
 output_dir: "."
 output:
   html_document:
