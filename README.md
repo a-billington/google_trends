@@ -4,4 +4,4 @@ A simple dashboard of Google Trends data created using `flexdashboard` `gtrends`
 
 Provide four keywords in the `wrangle.r` file to create a customized dashboard.
 
-[Example Dashboard](https://github.com/a-billington/google_trends/blob/master/screenshot.PNG "Logo Title Text 1")
+![Example Dashboard](https://github.com/a-billington/google_trends/blob/master/screenshot.PNG "Logo Title Text 1")
