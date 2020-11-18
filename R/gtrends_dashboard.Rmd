@@ -26,12 +26,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-Row {data-height=350}
+Numbers represent search interest relative to the highest point on the chart for the given region and time. A value of 100 is the peak popularity for the term. A value of 50 means that the term is half as popular. A score of 0 means there was not enough data for this term.
+
+Row {data-height=250}
 -------------------------------------
 ### `r toupper(names(interest_xts)[1])`
 ```{r}
 
 dygraph(interest_xts[, 1], group = "gtrends") %>%
+  dyAxis("y", valueRange = c(0, 101)) %>%
   dyOptions(
     colors = RColorBrewer::brewer.pal(3, "Set2"),
     fillGraph = TRUE,
@@ -42,12 +45,13 @@ dygraph(interest_xts[, 1], group = "gtrends") %>%
   dyLegend(show = "follow")
 ```
 
-Row {data-height=350}
+Row {data-height=250}
 -------------------------------------
 ### `r toupper(names(interest_xts)[2])`
 
 ```{r}
 dygraph(interest_xts[, 2], group = "gtrends") %>%
+  dyAxis("y", valueRange = c(0, 101)) %>%
   dyOptions(
     colors = RColorBrewer::brewer.pal(3, "Set2"),
     fillGraph = TRUE,
@@ -58,12 +62,30 @@ dygraph(interest_xts[, 2], group = "gtrends") %>%
   dyLegend(show = "follow")
 ```
 
-Row {data-height=350}
+Row {data-height=250}
 -------------------------------------
 ### `r toupper(names(interest_xts)[3])`
 
 ```{r}
 dygraph(interest_xts[, 3], group = "gtrends") %>%
+  dyAxis("y", valueRange = c(0, 101)) %>%
+  dyOptions(
+    colors = RColorBrewer::brewer.pal(3, "Set2"),
+    fillGraph = TRUE,
+    fillAlpha = 0.4
+  ) %>%
+  dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+  dyRangeSelector(height = 30) %>%
+  dyLegend(show = "follow")
+```
+
+Row {data-height=250}
+-------------------------------------
+### `r toupper(names(interest_xts)[4])`
+
+```{r}
+dygraph(interest_xts[, 4], group = "gtrends") %>%
+  dyAxis("y", valueRange = c(0, 101)) %>%
   dyOptions(
     colors = RColorBrewer::brewer.pal(3, "Set2"),
     fillGraph = TRUE,

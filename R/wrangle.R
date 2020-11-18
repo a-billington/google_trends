@@ -2,13 +2,13 @@ require(here)
 source(here::here("/R/packages.r"))
 
 # Set Google Trends argument values
-keyword <- c("Divorce", "Proabte", "Money Claims")
+keyword <- c("divorce", "probate", "money claims", "pangolin")
 country_code <- "GB" # GB, "" for world or see data("countries") for country codes
-start_date <- Sys.Date() - months(12)
+start_date <- Sys.Date() - months(24)
 end_date <- Sys.Date()
 date_range <- paste0(start_date, " ", end_date)
 gprop <- "web"
-category <- 19 # see data("categories")
+category <- 0 # see data("categories")
 
 # Download trends data
 gtrends <- gtrendsR::gtrends(
