@@ -1,4 +1,4 @@
-require(here)
+library(here)
 source(here::here("/R/packages.r"))
 
 # Set Google Trends argument values

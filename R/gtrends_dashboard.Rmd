@@ -48,7 +48,7 @@ dygraph(interest_xts[, 1], group = "gtrends") %>%
 Row {data-height=250}
 -------------------------------------
 ### `r toupper(names(interest_xts)[2])`
-
+y
 ```{r}
 dygraph(interest_xts[, 2], group = "gtrends") %>%
   dyAxis("y", valueRange = c(0, 101)) %>%
