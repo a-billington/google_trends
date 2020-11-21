@@ -3,7 +3,7 @@ source(here::here("/R/packages.r"))
 
 # Set Google Trends argument values
 keyword <- c("divorce", "probate", "money claims", "pangolin")
-country_code <- "GB" #see data("countries") for country codes
+country_code <- "GB" # see data("countries") for country codes
 start_date <- Sys.Date() - months(24)
 end_date <- Sys.Date()
 date_range <- paste0(start_date, " ", end_date)
@@ -15,14 +15,16 @@ gtrends <- gtrendsR::gtrends(
   keyword = keyword,
   geo = country_code,
   time = date_range,
-  gprop = gprop,category = category
+  gprop = gprop,
+  category = category
 )
 
 # interest_time - data frame of interest over time
 interest_time <- gtrends %>%
   purrr::pluck("interest_over_time") %>%
   tibble::as_tibble() %>%
-  dplyr::select(date,value = hits,
+  dplyr::select(date,
+    value = hits,
     keyword
   ) %>%
   dplyr::mutate(date = lubridate::ymd(date))

@@ -1,3 +1,5 @@
+![Mega-Linter](https://github.com/a-billington/google_trends/workflows/Mega-Linter/badge.svg)
+
 # Google Trends Flexhboard 
 
 A simple dashboard of Google Trends data created using `flexdashboard` `gtrends` and `dygraphs` packaged in R. 
