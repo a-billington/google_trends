@@ -22,8 +22,7 @@ gtrends <- gtrendsR::gtrends(
 interest_time <- gtrends %>%
   purrr::pluck("interest_over_time") %>%
   tibble::as_tibble() %>%
-  dplyr::select(date,
-    value = hits,
+  dplyr::select(date,value = hits,
     keyword
   ) %>%
   dplyr::mutate(date = lubridate::ymd(date))
