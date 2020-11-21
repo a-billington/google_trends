@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [master]
 
-env: #Uncomment to activate variables below
+env:
 # Apply linter fixes configuration
 APPLY_FIXES: all # Uncomment to apply fixes provided by linters. You can also specify the list of fixing linters
 APPLY_FIXES_EVENT: all # Decide which event triggers application of fixes in a commit or a PR (pull_request (default), push, all)
